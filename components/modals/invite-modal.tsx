@@ -14,11 +14,11 @@ import { Label } from "@/components/ui/label";
 import { useModal } from "@/hooks/use-model-store";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-// import { useOrigin } from "@/hooks/use-origin";
+import { useOrigin } from "@/hooks/use-origin";
 
 export const InviteModal = () => {
   const { onOpen, isOpen, onClose, type, data } = useModal();
-  // const origin = useOrigin();
+  const origin = useOrigin();
 
   const isModalOpen = isOpen && type === "invite";
   const { server } = data;
