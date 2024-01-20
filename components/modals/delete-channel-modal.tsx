@@ -44,6 +44,7 @@ export const DeleteChannelModal = () => {
       console.log(error);
     } finally {
       setIsLoading(false);
+      router.refresh();
     }
   }
 
