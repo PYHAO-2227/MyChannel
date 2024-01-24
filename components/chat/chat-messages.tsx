@@ -1,7 +1,7 @@
 "use client";
 
 import { Fragment, useRef, ElementRef } from "react";
-// import { format } from "date-fns";
+import { format } from "date-fns";
 import { Member, Message, Profile } from "@prisma/client";
 import { Loader2, ServerCrash } from "lucide-react";
 
@@ -10,6 +10,7 @@ import { useChatQuery } from "@/hooks/use-chat-query";
 // import { useChatScroll } from "@/hooks/use-chat-scroll";
 
 import { ChatWelcome } from "./chat-welcome";
+import { ChatItem } from "./chat-item";
 // import { ChatItem } from "./chat-item";
 
 const DATE_FORMAT = "d MMM yyyy, HH:mm";
@@ -116,7 +117,7 @@ export const ChatMessages = ({
           )}
         </div>
       )}
-      {/* <div className="flex flex-col-reverse mt-auto">
+      <div className="flex flex-col-reverse mt-auto">
         {data?.pages?.map((group, i) => (
           <Fragment key={i}>
             {group.items.map((message: MessageWithMemberWithProfile) => (
@@ -136,7 +137,7 @@ export const ChatMessages = ({
             ))}
           </Fragment>
         ))}
-      </div> */}
+      </div>
       <div ref={bottomRef} />
     </div>
   )
