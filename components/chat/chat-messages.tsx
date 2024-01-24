@@ -11,7 +11,6 @@ import { useChatQuery } from "@/hooks/use-chat-query";
 
 import { ChatWelcome } from "./chat-welcome";
 import { ChatItem } from "./chat-item";
-// import { ChatItem } from "./chat-item";
 
 const DATE_FORMAT = "d MMM yyyy, HH:mm";
 
@@ -63,14 +62,14 @@ export const ChatMessages = ({
     paramKey,
     paramValue,
   });
-//   useChatSocket({ queryKey, addKey, updateKey });
-//   useChatScroll({
-//     chatRef,
-//     bottomRef,
-//     loadMore: fetchNextPage,
-//     shouldLoadMore: !isFetchingNextPage && !!hasNextPage,
-//     count: data?.pages?.[0]?.items?.length ?? 0,
-//   })
+  // useChatSocket({ queryKey, addKey, updateKey });
+  // useChatScroll({
+  //   chatRef,
+  //   bottomRef,
+  //   loadMore: fetchNextPage,
+  //   shouldLoadMore: !isFetchingNextPage && !!hasNextPage,
+  //   count: data?.pages?.[0]?.items?.length ?? 0,
+  // })
 
   if (status === "pending") {
     return (
