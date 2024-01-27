@@ -34,7 +34,6 @@ export const DeleteMessageModal = () => {
       })
 
       await axios.delete(url);
-
       onClose();
       router.refresh();
     } catch (error) {
